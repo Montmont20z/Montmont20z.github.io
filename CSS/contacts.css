@@ -1,0 +1,92 @@
+table.socials{
+    width: 90%;
+    margin: 0 auto 0 auto;
+    padding: 100px;
+    padding-bottom: 205px;
+}
+table.socials td {
+    margin: 0 auto 0 auto;
+    width: 33%;
+    text-align: center;
+}
+h1 {
+    display: block;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    padding: 25px;
+}
+p {
+   font-weight: 700;           
+}
+.button {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.button:hover span {
+padding-right: 25px;
+}
+
+.button:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+h1 {
+font-size: 48px;
+color: #2E3D4F;
+text-align: center;
+margin-top: 20px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+font-family: 'Arial', sans-serif;
+letter-spacing: 2px;
+animation: scaleFade 5s infinite alternate; 
+}
+
+
+@keyframes scaleFade {
+0% {
+    opacity: 0; 
+    transform: scale(0.8); 
+}
+100% {
+    opacity: 1; 
+    transform: scale(1.2);
+}
+}
+footer#footer{
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    padding: 8px;
+    background-clip: padding-box;
+    background-color: rgba(72, 158, 144, 0.589);
+    margin-bottom: 0;
+}
+table#L{
+    margin-left: 5%;
+}
+        
+table#R{
+    margin-left:50%;
+}
+
+table#L td {
+    text-align: left;
+}

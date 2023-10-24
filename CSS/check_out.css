@@ -1,0 +1,49 @@
+
+body {
+    margin-top: 20px;
+}
+
+.select{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.select:hover{
+    transform: scale(1.2,1.2);
+    background-color: rgba(255,255,255,50%);
+    
+}
+
+.food_image {
+    height: 200px;
+    width: 220px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+td {
+    border: 10px double #FFFFFF;
+    
+    
+    padding: 20px;
+}
+
+aside {
+    float: right;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255,255,255,40%);
+    padding: 10px 40px 10px 50px;
+    border: 4px solid white;
+    border-radius: 16px;
+}
+

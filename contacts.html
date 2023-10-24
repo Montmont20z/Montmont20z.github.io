@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <meta charset="utf-8"/>
+        <title>Contact Us</title>
+
+        <link rel="stylesheet" href="css/css.css">
+        <link rel="stylesheet" href="css/contacts.css">
+        <link rel="icon" type="image/x-icon" href="picture/HatchfulExport-All/favicon2.png" />
+
+    </head>
+
+    <body>
+        
+        <nav>
+            
+            <ul>
+                <a href="homepage.html" class="container">
+                    <img src="picture/pls_eat_logo2.png" width="100px" height="40px"/>
+                    <div class="overlay">
+                        
+                    </div>
+                </a>
+                <a href="homepage.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contacts.html">Contact Us</a>
+                <a href="location.html">Located Us</a>
+                <a href="review.html">Review</a>
+                <div class="container" id="add_to_cart">
+                    <a href="add_to_cart.html">
+                        <img src="picture/cart.png" width="50px" height="40px" />
+                    
+                    <div class="overlay">
+                        
+                    </div>
+                    </a>
+                </div>
+                
+                
+            </ul>
+        </nav>
+        <div>
+        <h1>
+            Contact Us
+        </h1>
+
+        <table class="socials">
+            <tr>
+                <td>
+
+                    <a href="https://www.facebook.com/" >
+                        <img id="facebook-image" height="200px" width="200px" src="picture/fb.png", alt="Facebook"/>
+                    </a>
+
+                    <div>
+                        <a href="https://www.facebook.com/" ><button class="button"><span>by Facebook </span></button></a>
+                    </div>
+                </td>
+                <td>
+
+                    <a href="https://www.instagram.com/" >
+                        <img id="instagram-image" height="200px" width="200px" src="picture/insta.png", alt="Instagram"/>
+                    </a>
+                    <div>
+                        <a href="https://www.instagram.com/" ><button class="button"><span>by Instagram </span></button></a>
+                    </div>
+
+                </td>
+                <td>
+                    <a href="tel:0123456789">
+                        <img id="phone-image" src="picture/phone.png" height="200px" width="250px">
+                    </a>
+                    <div>
+                        <a href="tel:0123456789" ><button class="button"><span>by Telephone </span></button></a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+</div>
+
+<footer id="footer">
+    <div style="display: flex;">
+     <table id="L">
+        <tr>
+        <th>CONTACT:</th> 
+         <td>+60 12 345 6789 </td>
+        </tr>
+        
+       <tr>
+        <th style="vertical-align: top;">OFFICE:</th>  
+        <td>Ground Floor,<br>
+            Bangunan Tan Sri Khaw Kai Boh (Block A),<br>
+            Jalan Genting Kelang, Setapak,<br>
+            53300 Kuala Lumpur,<br>
+            Federal Territory of Kuala Lumpur<br>
+        </td>
+            </tr>
+
+    </table>   
+
+    <table id="R">
+        <tr>
+        <th>Instagram: </th>
+         <td>PLS_EAT</td> 
+        </tr>
+        
+        <tr>
+        <th>Facebook: </th>
+        <td>PLS EAT official</td>
+        </tr>
+        
+        <tr>
+        <th>Email: </th>
+        <td>google@gmail.com</td>
+        </tr>
+        
+        </table>
+    </div>
+</footer>
+
+
+        <script>
+            // Function to apply a floating effect to an element
+            function applyFloatingEffect(element) {
+                element.style.transition = 'transform 0.5s ease-in-out';
+                element.addEventListener('mouseenter', () => {
+                    element.style.transform = 'scale(1.1)'; // Increase the size on hover
+                });
+                element.addEventListener('mouseleave', () => {
+                    element.style.transform = 'scale(1)'; // Restore the original size
+                });
+            }
+        
+            // Get references to your images and apply the floating effect to them
+            const facebookImage = document.querySelector('#facebook-image');
+            const instagramImage = document.querySelector('#instagram-image');
+            const phoneImage = document.querySelector('#phone-image');
+        
+            applyFloatingEffect(facebookImage);
+            applyFloatingEffect(instagramImage);
+            applyFloatingEffect(phoneImage);
+        </script>
+
+    </body>
+
+</html>

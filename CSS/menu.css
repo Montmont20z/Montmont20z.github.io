@@ -1,0 +1,77 @@
+
+
+
+#logo {
+    width: 100%;
+}
+
+h1#category{
+    text-align: center;
+    font-size: 50px;
+}
+
+h3.foodName{
+    font-size:35px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.specialMenu {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.specialMenu h2 {
+    font-size: 28px;
+    color: #f25c05;
+    margin-bottom: 15px;
+}
+
+.specialMenu img {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    border: 3px solid #f25c05;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.specialMenu img:hover {
+    transform: scale(1.05);
+}
+
+.specialMenu{
+    display: flex;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 5px;
+    color: #333;
+}
+
+footer#footer, footer#footer td, footer#footer th, footer#footer table, footer#footer tr  {
+    
+    font-weight: 600;
+    color: white;
+    background-clip: padding-box;
+    background-color: rgb(147,173,131);
+    margin-bottom: 0;
+    border: none;
+    width: auto;
+    padding: 0px;
+    border-spacing: 10px;
+    border-radius: 0px;
+    
+}
+
+table#L{
+    margin-left: 5%;
+}
+        
+table#R, table#R td, table#R th{
+    margin-left:50%;
+}
+
+table#L td {
+    text-align: left;
+}

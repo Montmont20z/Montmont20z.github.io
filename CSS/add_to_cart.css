@@ -1,0 +1,79 @@
+body#addtocart{
+    margin-top: 20px;
+    scroll-behavior: smooth;
+}
+
+h1{
+    float:left;
+    clear:both;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size : 4em; 
+text-align: center;
+color: black;
+background-color: aliceblue;
+margin-top: 40px;
+clear: both;
+
+}
+
+img{
+    margin:20px;
+}
+
+dt{
+    font-size: 50px;
+}
+
+fieldset{
+    background-color: antiquewhite;
+    margin-bottom: 15px; 
+    box-shadow:  0 5px 9px 0 rgba(0, 0, 0, 0.5);
+    border: solid brown;
+    border-width: 4px;
+}
+
+button{
+    padding: 5px;
+    background-color: yellow;
+    margin: 3px;
+}
+
+button:hover{
+    color: red;
+    background-color: aliceblue;
+}
+
+form:hover{
+    color: rgb(225, 157, 9);
+    transform: scale(1,1) translateY(-10px);
+    transition: all 0.5s linear;
+}
+
+div#confirmOrder{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 250px;
+}
+
+button#confirmOrder{
+    padding: 30px;
+    font-size: large;
+    background-color: rgb(223, 170, 71);
+    border-color: red;
+    border-width: 5px;
+}
+
+button#confirmOrder:hover{
+    color:aliceblue;
+    font-weight: bolder;
+}
+
+button.ordered::after{
+    color:aliceblue;
+    background-color: brown;
+
+}

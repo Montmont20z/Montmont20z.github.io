@@ -1,0 +1,90 @@
+h1#category{
+    text-align: center;
+    font-size: 50px;
+}
+
+h3.foodName{
+    font-size:35px;
+    border: 1px solid white;
+    border-radius: 10px;
+    vertical-align: top;
+}
+
+a.cart{
+    text-decoration: none;
+    color: white;
+}
+
+video{
+    width: 35%;
+    height: 400px;
+    margin-left: 33%;
+}
+
+a.food_type{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family: cursive;
+    font-weight: bold;
+    transform: translateY(0);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+a.food_type:hover{
+    color: #f25c05;
+    transform: translateY(-5px);
+}
+
+.cart {
+    transition: opacity 0.3s ease;
+}
+
+.cart:hover {
+    color: #f25c05;
+    opacity: 0.7;
+}
+
+#category {
+    position: relative;
+    font-size: 20px;
+    color: #333;
+}
+
+
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+.video-container {
+    max-width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.video-container video {
+    width: 600px;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+}
+
+.video-container video:focus {
+    outline: none;
+}
+
+.cart:hover img {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+
+div.specialMenu img{
+    width: 200px;
+    height: 180px;
+}
+

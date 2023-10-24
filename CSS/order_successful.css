@@ -1,0 +1,35 @@
+
+            body{
+                background-color: #F29F05;
+                text-align: center;
+                
+            }
+            h1 {
+                font-size: 100px;
+                
+            }
+            h3{
+                font-size: 30px;
+                margin: 20px;
+            }
+
+            button{
+                width: 100px;
+                height: 40px;
+                border-radius: 16px;
+                border-width: 4px;
+                font-family: Arial;
+                
+            }
+
+            button:active{
+                background-color: black;
+                color: white;
+            }
+
+            #order_successful_img{
+                width:20%;
+                height: 20%;
+            }
+
+       

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8"/>
+    <title>Choose Payment Method</title>
+    <link rel="icon" type="image/x-icon" href="picture/HatchfulExport-All/favicon2.png" />
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/payment.css">
+</head>
+
+<body>
+    <link href="css/css.css" rel="stylesheet"/>
+    <nav>
+            
+        <ul>
+            <a href="homepage.html" class="container">
+                <img src="picture/pls_eat_logo2.png" width="100px" height="40px"/>
+                <div class="overlay">
+                    
+                </div>
+            </a>
+            <a href="homepage.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about_us.html">About Us</a>
+            <a href="contacts.html">Contact Us</a>
+            <a href="location.html">Located Us</a>
+            <a href="review.html">Review</a>
+            <div class="container" id="add_to_cart">
+                <a href="add_to_cart.html">
+                    <img src="picture/cart.png" width="50px" height="40px" />
+                
+                <div class="overlay">
+                    
+                </div>
+                </a>
+            </div>
+            
+            
+        </ul>
+    </nav>
+    <div class="cart">
+        <div class="item">
+            <span class="delete-item"></span>
+        </div>
+
+        <div class="image"></div>
+
+        <div class="quantity">
+            <button class="plus" type="button" name="button">+</button>
+            <button class="minus" type="button" name="button">-</button>
+        </div>
+    </div>
+
+
+    <h1>You are one step away from your meal!</h1>
+
+    <form action="order_successful.html">
+
+<br>
+
+        <div>
+            <table>
+                <tr>
+                    <th>Choose your payment method <span id="colon">:</span></th>
+                    <td><select name="payment method" id="payment method">
+                        <option value="Touch n Go">Touch n Go</option>
+                        <option value="Visa">Visa</option>
+                        <option value="Master">Master</option></td>
+                </tr>
+                <tr>
+                    <th>Input your name <span id="colon">:</span></th>
+                    <td><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <th>Card Number <span id="colon">:</span></th>
+                    <td><input type="numbert" id="card number" maxlength="16"></td>
+                </tr>
+                <tr>
+                    <th>Card CV <span id="colon">:</span></th>
+                    <td><input type="numbers" id="CV number" maxlength="3"></td>
+                </tr>
+            </table>
+        
+        <a href="order_successful.html">
+        <button class="button"><span>Submit </span></button>
+    </a>
+    </form>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+body#body {
+    margin-top: 20px;
+}
+
+h1#h1{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size : 4em; 
+text-align: center;
+color: orange;
+background-color: aliceblue;
+}
+
+p#a{
+font-size: 2em;
+text-align: center;
+color: orange;
+background-color: aliceblue;
+}
+
+img#chef{
+margin: 0 auto 0 auto;
+box-shadow:  0 5px 9px 0 rgba(0, 0, 0, 0.5);
+}
+
+section#content{
+margin-top: 15px;
+}
+
+
+section#des {
+padding: 70px;
+margin: 30px;
+background-color: rgb(245, 233, 199);
+font-family: none;
+font-size: 1.5em;
+font-weight: bold;
+text-align: center;
+color: black;
+background-clip: padding-box;
+box-shadow:  0 5px 9px 0 rgba(0, 0, 0, 0.5);
+}
+
+footer#footer{
+text-align: center;
+font-weight: 600;
+color: white;
+padding: 8px;
+background-clip: padding-box;
+background-color: rgba(72, 158, 144, 0.589);
+
+}
+
+p#b{
+font-style: oblique;
+}
+
+table#L{
+margin-left: 5%;
+}
+
+table#R{
+margin-left:50%;
+}
+
+th, td{
+text-align: left;
+}
+
+h2#ourstory{
+margin: 5px;
+text-decoration: underline;
+font-weight: 1000;
+color: rgba(213, 30, 30, 0.655)
+}

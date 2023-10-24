@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>My Cart </title>
+        <link href="CSS/add_to_cart.css" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="picture/HatchfulExport-All/favicon2.png" />
+         <script>
+            //Price
+            const wonton_noodles_price = 8.50;
+            const bbq_pork_rice_price = 13.50;
+            const nasi_lemak_price = 12.50;
+            const yang_zhou_fried_rice_price = 15.30;
+            const baked_cheese_rice_price = 11.00;
+            const curry_laksa_price = 24.50;
+            const ipoh_hofun_price = 10.8;
+            const hainanese_chicken_chop_rice_price = 10.5;
+            const prawn_mee_price = 7.50;
+            const baked_cheese_pasta_price = 23.5;
+            const polo_bun_price = 5.50;
+            const half_boiled_egg_price = 2.50;
+            const kaya_butter_toast_price = 4.00;
+            const croissant_price = 5.50;
+            const full_english_breakfast_price = 10.50;
+            const pancake_price = 7.00;
+            const hong_kong_milk_tea_price = 4.50;
+            const cham_price = 4.50;
+            const kopi_c_price = 3.00;
+            const soya_milk_price = 4.00;
+            const chrysanthemum_tea_price = 2.50;
+            const luo_han_guo_price = 2.50;
+            const honey_lemon_juice_price = 4.00;
+            const mango_pomelo_sago_price = 7.00;
+            const portuguese_tart_price = 6.00;
+            const cendol_price = 7.00;
+            const fruity_yogourt_price = 9.00;
+            const pudding_price = 6.00;
+            
+
+            // Single Item Price
+            function get_food_price(element, price, name){
+                var food_number = parseInt(element.value);
+                var selectedSize = document.querySelector(`.${name}:checked`).value;
+                var size_price = parseFloat(selectedSize);
+                var item_total = food_number * price + size_price;
+
+                //update item price
+                document.querySelector(`[data-name= ${name}]`).innerHTML = "RM" + item_total.toFixed(2);
+                
+            }
+
+            
+            function myFunction(name, event) {
+                alert(`${name} item is added to cart`);
+                event.preventDefault();
+            }
+
+        </script>
+    </head>
+    <link href="CSS/css.css" rel="stylesheet" />
+    <link href="css/add_to_cart.css" rel="stylesheet"/>
+
+    <body id="addtocart">
+        
+        <nav>
+            
+            <ul>
+                <a href="homepage.html" class="container">
+                    <img src="picture/pls_eat_logo2.png" width="100px" height="40px"/>
+                    <div class="overlay"></div>
+                </a>
+                <a href="homepage.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contacts.html">Contact Us</a>
+                <a href="location.html">Located Us</a>
+                <a href="review.html">Review</a>
+                <div class="container" id="add_to_cart">
+                    <a href="add_to_cart.html">
+                        <img src="picture/cart.png" width="50px" height="40px" />
+                    <div class="overlay"></div>
+                    </a>
+                </div>
+            </ul>
+        </nav>
+
+        <h2 style="text-align:center;"> Main Meal </h2>
+    <!-- Item 1  -->
+    <div >
+        <form>
+            <fieldset>
+
+        <div>
+            
+            <h1><img src="picture/wonton_noodles.jpg" height="160px" width="150px" alt="Wonton Noodles"></h1>
+            <dl>
+                <dt><strong>Wonton Mee</strong></dt>
+                
+        </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, wonton_noodles_price, 'wonton_noodles')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="wonton_noodles" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="wonton_noodles"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="wonton_noodles"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="wonton_noodles">RM0.00</div></div>
+
+                <div>
+                    <button onclick="myFunction('wonton noodles', event)">Add to Cart</button>
+                </div>
+            </fieldset>
+
+        </form>
+    </div>
+    <!-- Item 2 -->
+    <div>
+        <form>
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/bbq_pork_rice.webp" height="160px" width="150px" alt="bbq_pork_rice"></h1>
+            <dl>
+                <dt><strong>BBQ Pork Rice</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, bbq_pork_rice_price, 'bbq_pork_rice')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="bbq_pork_rice" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size"class="bbq_pork_rice"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size"class="bbq_pork_rice"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div data-name="bbq_pork_rice">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('bbq pork rice', event)">Add to Cart</button> 
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+
+    <!-- Item 3 -->
+    <div>
+        <form>
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/nasi_lemak.jpg" height="160px" width="150px" alt="nasi_lemak"></h1>
+            <dl>
+                <dt><strong>Nasi Lemak</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, nasi_lemak_price, 'nasi_lemak')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="nasi_lemak" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="nasi_lemak"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="nasi_lemak"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="nasi_lemak">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('nasi lemak', event)">Add to Cart</button>
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+
+    <!-- Item 4 -->
+    <div>
+        <form>
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/yang_zhou_fried_rice.jpg" height="160px" width="150px" alt="yang_zhou_fried_rice"></h1>
+            <dl>
+                <dt><strong>Yang Zhou Fried Rice</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, yang_zhou_fried_rice_price, 'yang_zhou_fried_rice')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="yang_zhou_fried_rice" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="yang_zhou_fried_rice"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="yang_zhou_fried_rice"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="yang_zhou_fried_rice">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('yang zhou fried rice', event)">Add to Cart</button>
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+
+    <!-- Item 5 -->
+    <div>
+        <form>
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/baked_cheese_rice.jpg" height="160px" width="150px" alt="baked_cheese_rice"></h1>
+            <dl>
+                <dt><strong>Baked Cheese Rice</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, baked_cheese_rice_price, 'baked_cheese_rice')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="baked_cheese_rice" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="baked_cheese_rice"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="baked_cheese_rice"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="baked_cheese_rice">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('baked cheese rice', event)">Add to Cart</button>
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+
+    <!-- Item 6 -->
+    <div>
+        <form>
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/curry_laksa.jpg" height="160px" width="150px" alt="curry_laksa"></h1>
+            <dl>
+                <dt><strong>Laksa</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, curry_laksa_price, 'curry_laksa')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="curry_laksa" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="curry_laksa"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="curry_laksa"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="curry_laksa">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('curry laksa', event)">Add to Cart</button>
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+   
+    <!-- Item 7 -->
+    <div>
+        <form>
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/ipoh_hofun.png" height="160px" width="150px" alt="ipoh_hofun"></h1>
+            <dl>
+                <dt><strong>Ipoh Hofun</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, ipoh_hofun_price, 'ipoh_hofun')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="ipoh_hofun" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="ipoh_hofun"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="ipoh_hofun"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="ipoh_hofun">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('ipoh hofun', event)">Add to Cart</button>
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+    
+    <!-- Item 8 -->
+    <div>
+        <form >
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/hainanese_chicken_chop_rice.jpg" height="160px" width="150px" alt="hainanese_chicken_chop_rice"></h1>
+            <dl>
+                <dt><strong>Hainanese Chicken Chop Rice</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, hainanese_chicken_chop_rice_price, 'hainanese_chicken_chop_rice')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="hainanese_chicken_chop_rice" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="hainanese_chicken_chop_rice"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="hainanese_chicken_chop_rice"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="hainanese_chicken_chop_rice">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('hainanese chicken chop rice', event)">Add to Cart</button>
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+
+    <!-- Item 9 -->
+    <div>
+        <form>
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/prawn_mee.png" height="160px" width="150px" alt="prawn_mee"></h1>
+            <dl>
+                <dt><strong>Prawn Mee</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, prawn_mee_price, 'prawn_mee')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="prawn_mee" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="prawn_mee"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="prawn_mee"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="prawn_mee">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('prawn mee', event)">Add to Cart</button> 
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+
+    <!-- Item 10 -->
+    <div>
+        <form>
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/cheese_pasta.jpg" height="160px" width="150px" alt="baked_cheese_pasta"></h1>
+            <dl>
+                <dt><strong>Baked Cheese Pasta</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, baked_cheese_pasta_price, 'baked_cheese_pasta')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="baked_cheese_pasta" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="baked_cheese_pasta"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="baked_cheese_pasta"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="baked_cheese_pasta">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('baked cheese pasta',event)">Add to Cart</button> 
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+
+    <h2 id="breakfast" style="text-align:center;"> Breakfast </h2>
+
+    <div>
+        <form >
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/polo_bun.jpg" height="160px" width="150px" alt="polo_bun"></h1>
+            <dl>
+                <dt><strong>Polo Bun</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, polo_bun_price, 'polo_bun')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="polo_bun" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="polo_bun"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="polo_bun"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="polo_bun">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('polo bun',event)">Add to Cart</button>
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+
+    <div>
+        <form >
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/half_boiled_egg.jpg" height="160px" width="150px" alt="half_boiled_egg"></h1>
+            <dl>
+                <dt><strong>Half Boiled Egg</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, half_boiled_egg_price, 'half_boiled_egg')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="half_boiled_egg" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="half_boiled_egg"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="half_boiled_egg"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="half_boiled_egg">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('half boiled egg',event)">Add to Cart</button>
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+
+    <div>
+        <form >
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/kaya_butter_toast.webp" height="160px" width="150px" alt="kaya_butter_toast"></h1>
+            <dl>
+                <dt><strong>Kaya Butter Toast</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, kaya_butter_toast_price, 'kaya_butter_toast')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="kaya_butter_toast" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="kaya_butter_toast"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="kaya_butter_toast"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="kaya_butter_toast">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('kaya butter toast',event)">Add to Cart</button>
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+
+    <div>
+        <form>
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/croissant.jpeg" height="160px" width="150px" alt="croissant"></h1>
+            <dl>
+                <dt><strong>Croissant</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, croissant_price, 'croissant')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="croissant" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="croissant"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="croissant"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="croissant">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('croissant',event)">Add to Cart</button>
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+
+
+    <div>
+        <form>
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/full_english_breakfast.webp" height="160px" width="150px" alt="full english breakfast"></h1>
+            <dl>
+                <dt><strong>Full English Breakfast</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, full_english_breakfast_price, 'full_english_breakfast')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="full_english_breakfast" />
+                    <label>Small</label>
+                    <input type="radio" value="1" name="size" class="full_english_breakfast"/>
+                    <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="full_english_breakfast"/>
+                    <label>Large</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="full_english_breakfast">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('full english breakfast',event)">Add to Cart</button>
+                </div>
+            </fieldset>
+    
+        </form>
+    </div>
+
+    <div>
+    <form>
+        <fieldset>
+
+        <div>
+        <h1><img src="picture/pancake.jpg" height="160px" width="150px" alt="pancake"></h1>
+        <dl>
+            <dt><strong>Pancake</strong></dt>
+            
+        </div>
+            <div> <label><strong>Quantity</strong></label>
+                <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, pancake_price, 'pancake')"/>
+            </div>
+            <div><strong>Size</strong>
+                <input type="radio" value="0" name="size" class="pancake" />
+                <label>Small</label>
+                <input type="radio" value="1" name="size" class="pancake"/>
+                <label>Medium</label>
+                <input type="radio" value="2" name="size" class="pancake"/>
+                <label>Large</label>
+            </div>
+            <div><strong>Price: </strong><div  data-name="pancake">RM0.00</div></div>
+
+            <div>
+                <button onclick="myFunction('pancake',event)">Add to Cart</button>
+            </div>
+        </fieldset>
+
+        </form>
+    </div>
+
+    <h2 id="beverage" style="text-align:center;"> Beverage </h2>
+
+    
+
+    <div>
+        <form>
+            <fieldset>
+    
+            <div>
+            <h1><img src="picture/hong_kong_milk_tea.jpg" height="160px" width="150px" alt="hong kong milk tea"></h1>
+            <dl>
+                <dt><strong>Hong Kong Milk Tea</strong></dt>
+                
+            </div>
+                <div> <label><strong>Quantity</strong></label>
+                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, hong_kong_milk_tea_price, 'hong_kong_milk_tea')"/>
+                </div>
+                <div><strong>Size</strong>
+                    <input type="radio" value="0" name="size" class="hong_kong_milk_tea" />
+                    <label>Hot</label>
+                    <input type="radio" value="1" name="size" class="hong_kong_milk_tea"/>
+                    <label>Regular</label>
+                    <input type="radio" value="2" name="size" class="hong_kong_milk_tea"/>
+                    <label>Cold</label>
+                </div>
+                <div><strong>Price: </strong><div  data-name="hong_kong_milk_tea">RM0.00</div></div>
+    
+                <div>
+                    <button onclick="myFunction('hong kong milk tea',event)">Add to Cart</button>
+                </div>
+            </fieldset>
+    
+            </form>
+        </div>
+
+        <div>
+            <form>
+                <fieldset>
+        
+                <div>
+                <h1><img src="picture/cham.jpg" height="160px" width="150px" alt="cham"></h1>
+                <dl>
+                    <dt><strong>Cham</strong></dt>
+                    
+                </div>
+                    <div> <label><strong>Quantity</strong></label>
+                        <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, cham_price, 'cham')"/>
+                    </div>
+                    <div><strong>Size</strong>
+                        <input type="radio" value="0" name="size" class="cham" />
+                        <label>Hot</label>
+                        <input type="radio" value="1" name="size" class="cham"/>
+                        <label>Regular</label>
+                        <input type="radio" value="2" name="size" class="cham"/>
+                        <label>Cold</label>
+                    </div>
+
+                    <div><strong>Price: </strong><div  data-name="cham">RM0.00</div></div>
+        
+                    <div>
+                        <button onclick="myFunction('cham',event)">Add to Cart</button>
+                    </div>
+                </fieldset>
+        
+                </form>
+            </div>
+
+            <div>
+                <form>
+                    <fieldset>
+            
+                    <div>
+                    <h1><img src="picture/coffee_c.webp" height="160px" width="150px" alt="kopi c"></h1>
+                    <dl>
+                        <dt><strong>Kopi C</strong></dt>
+                        
+                    </div>
+                        <div> <label><strong>Quantity</strong></label>
+                            <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, kopi_c_price, 'kopi_c')"/>
+                        </div>
+                        <div><strong>Size</strong>
+                            <input type="radio" value="0" name="size" class="kopi_c" />
+                            <label>Hot</label>
+                            <input type="radio" value="1" name="size" class="kopi_c"/>
+                            <label>Regular</label>
+                            <input type="radio" value="2" name="size" class="kopi_c"/>
+                            <label>Cold</label>
+                        </div>
+                        <div><strong>Price: </strong><div  data-name="kopi_c">RM0.00</div></div>
+            
+                        <div>
+                            <button onclick="myFunction('kopi c',event)">Add to Cart</button>
+                        </div>
+                    </fieldset>
+            
+                    </form>
+                </div>
+
+                <div>
+                    <form>
+                        <fieldset>
+                
+                        <div>
+                        <h1><img src="picture/soya_milk.jpg" height="160px" width="150px" alt="soya_milk"></h1>
+                        <dl>
+                            <dt><strong>Soya Milk</strong></dt>
+                            
+                        </div>
+                            <div> <label><strong>Quantity</strong></label>
+                                <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, soya_milk_price, 'soya_milk')"/>
+                            </div>
+                            <div><strong>Size</strong>
+                                <input type="radio" value="0" name="size" class="soya_milk" />
+                                <label>Hot</label>
+                                <input type="radio" value="1" name="size" class="soya_milk"/>
+                                <label>Regular</label>
+                                <input type="radio" value="2" name="size" class="soya_milk"/>
+                                <label>Hot</label>
+                            </div>
+                            <div><strong>Price: </strong><div  data-name="soya_milk">RM0.00</div></div>
+                
+                            <div>
+                                <button onclick="myFunction('soya milk',event)">Add to Cart</button>
+                            </div>
+                        </fieldset>
+                
+                        </form>
+                    </div>
+
+                    <div>
+                        <form>
+                            <fieldset>
+                    
+                            <div>
+                            <h1><img src="picture/chrysanthemum_tea.jpg" height="160px" width="150px" alt="chrysanthemum_tea"></h1>
+                            <dl>
+                                <dt><strong>Chrysanthemum Tea</strong></dt>
+                                
+                            </div>
+                                <div> <label><strong>Quantity</strong></label>
+                                    <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, chrysanthemum_tea_price, 'chrysanthemum_tea')"/>
+                                </div>
+                                <div><strong>Size</strong>
+                                    <input type="radio" value="0" name="size" class="chrysanthemum_tea" />
+                                    <label>Hot</label>
+                                    <input type="radio" value="1" name="size" class="chrysanthemum_tea"/>
+                                    <label>Regular</label>
+                                    <input type="radio" value="2" name="size" class="chrysanthemum_tea"/>
+                                    <label>Cold</label>
+                                </div>
+                                <div><strong>Price: </strong><div  data-name="chrysanthemum_tea">RM0.00</div></div>
+                    
+                                <div>
+                                    <button onclick="myFunction('chrysanthemum tea',event)">Add to Cart</button>
+                                </div>
+                            </fieldset>
+                    
+                            </form>
+                        </div>
+
+                        <div>
+                            <form>
+                                <fieldset>
+                        
+                                <div>
+                                <h1><img src="picture/luo_han_guo.jpeg" height="160px" width="150px" alt="luo_han_guo"></h1>
+                                <dl>
+                                    <dt><strong>Luo Han Guo</strong></dt>
+                                    
+                                </div>
+                                    <div> <label><strong>Quantity</strong></label>
+                                        <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, luo_han_guo_price, 'luo_han_guo')"/>
+                                    </div>
+                                    <div><strong>Size</strong>
+                                        <input type="radio" value="0" name="size" class="luo_han_guo" />
+                                        <label>Hot</label>
+                                        <input type="radio" value="1" name="size" class="luo_han_guo"/>
+                                        <label>Medium</label>
+                                        <input type="radio" value="2" name="size" class="luo_han_guo"/>
+                                        <label>Cold</label>
+                                    </div>
+                                    <div><strong>Price: </strong><div  data-name="luo_han_guo">RM0.00</div></div>
+                        
+                                    <div>
+                                        <button onclick="myFunction('luo han guo',event)">Add to Cart</button> 
+                                    </div>
+                                </fieldset>
+                        
+                                </form>
+                            </div>
+
+                            <div>
+
+                        <form>
+                            <fieldset>
+                            
+                                <div>
+                            <h1><img src="picture/honey_lemon_juice.jpg" height="160px" width="150px" alt="honey_lemon_juice"></h1>
+                                 <dl>
+                                <dt><strong>Honey Lemon Juice</strong></dt>
+                                 
+                                </div>
+                                <div> <label><strong>Quantity</strong></label>
+                                 <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, honey_lemon_juice_price, 'honey_lemon_juice')"/>
+                                        </div>
+                                        <div><strong>Size</strong>
+                                            <input type="radio" value="0" name="size" class="honey_lemon_juice" />
+                                            <label>Hot</label>
+                                            <input type="radio" value="1" name="size" class="honey_lemon_juice"/>
+                                            <label>Regular</label>
+                              <input type="radio" value="2" name="size" class="honey_lemon_juice"/>
+                                 <label>Cold</label>
+                                </div>
+                                <div><strong>Price: </strong><div  data-name="honey_lemon_juice">RM0.00</div></div>
+                            
+                                <div>
+                                    <button onclick="myFunction('honey lemone juice',event)">Add to Cart</button> 
+                             </div>
+                         </fieldset>
+                            
+                         </form>
+                     </div>
+
+    <h2 id="dessert" style="text-align:center;"> Dessert </h2>
+
+    <div>
+        <form>
+       <fieldset>
+       
+           <div>
+       <h1><img src="picture/mango_pomelo_sago.jpg" height="160px" width="150px" alt="mango_pomelo_sago"></h1>
+            <dl>
+           <dt><strong>Mango Pomelo Sago</strong></dt>
+            
+           </div>
+           <div> <label><strong>Quantity</strong></label>
+            <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, mango_pomelo_sago_price, 'mango_pomelo_sago')"/>
+                   </div>
+                   <div><strong>Size</strong>
+                       <input type="radio" value="0" name="size" class="mango_pomelo_sago" />
+                       <label>Small</label>
+                       <input type="radio" value="1" name="size" class="mango_pomelo_sago"/>
+                       <label>Medium</label>
+                        <input type="radio" value="2" name="size" class="mango_pomelo_sago"/>
+                        <label>Large</label>
+           </div>
+           <div><strong>Price: </strong><div  data-name="mango_pomelo_sago">RM0.00</div></div>
+       
+           <div>
+            <button onclick="myFunction('mango pomelo sago',event)">Add to Cart</button>
+        </div>
+    </fieldset>
+       
+    </form>
+</div>
+
+<div>
+    <form>
+   <fieldset>
+   
+       <div>
+   <h1><img src="picture/portuguese_tart.jpg" height="160px" width="150px" alt="portuguese_tart"></h1>
+        <dl>
+       <dt><strong>Portuguese Tart</strong></dt>
+        
+       </div>
+       <div> <label><strong>Quantity</strong></label>
+        <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, portuguese_tart_price, 'portuguese_tart')"/>
+               </div>
+               <div><strong>Size</strong>
+                   <input type="radio" value="0" name="size" class="portuguese_tart" />
+                   <label>Small</label>
+                   <input type="radio" value="1" name="size" class="portuguese_tart"/>
+                   <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="portuguese_tart"/>
+                    <label>Large</label>
+       </div>
+       <div><strong>Price: </strong><div  data-name="portuguese_tart">RM0.00</div></div>
+   
+       <div>
+        <button onclick="myFunction('portuguese tart',event)">Add to Cart</button> 
+    </div>
+</fieldset>
+   
+</form>
+</div>
+
+<div>
+    <form>
+   <fieldset>
+   
+       <div>
+   <h1><img src="picture/cendol.jpg" height="160px" width="150px" alt="cendol"></h1>
+        <dl>
+       <dt><strong>Cendol</strong></dt>
+        
+       </div>
+       <div> <label><strong>Quantity</strong></label>
+        <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, cendol_price, 'cendol')"/>
+               </div>
+               <div><strong>Size</strong>
+                   <input type="radio" value="0" name="size" class="cendol" />
+                   <label>Small</label>
+                   <input type="radio" value="1" name="size" class="cendol"/>
+                   <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="cendol"/>
+                    <label>Large</label>
+       </div>
+       <div><strong>Price: </strong><div  data-name="cendol">RM0.00</div></div>
+   
+       <div>
+        <button onclick="myFunction('cendol',event)">Add to Cart</button> 
+    </div>
+</fieldset>
+   
+</form>
+</div>
+
+<div>
+    <form>
+   <fieldset>
+   
+       <div>
+   <h1><img src="picture/fruity_yogourt.jpg" height="160px" width="150px" alt="fruity_yogourt"></h1>
+        <dl>
+       <dt><strong>Fruity Yogurt</strong></dt>
+        
+       </div>
+       <div> <label><strong>Quantity</strong></label>
+        <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, fruity_yogourt_price, 'fruity_yogourt')"/>
+               </div>
+               <div><strong>Size</strong>
+                   <input type="radio" value="0" name="size" class="fruity_yogourt" />
+                   <label>Small</label>
+                   <input type="radio" value="1" name="size" class="fruity_yogourt"/>
+                   <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="fruity_yogourt"/>
+                    <label>Large</label>
+       </div>
+       <div><strong>Price: </strong><div  data-name="fruity_yogourt">RM0.00</div></div>
+   
+       <div>
+        <button onclick="myFunction('fruity yogourt',event)">Add to Cart</button> 
+    </div>
+</fieldset>
+   
+</form>
+</div>
+
+<div>
+    <form>
+   <fieldset>
+   
+       <div>
+   <h1><img src="picture/pudding.jpg" height="160px" width="150px" alt="pudding"></h1>
+        <dl>
+       <dt><strong>Pudding</strong></dt>
+        
+       </div>
+       <div> <label><strong>Quantity</strong></label>
+        <input type="number" value="0" max="99" min="0" onclick="get_food_price(this, pudding_price, 'pudding')"/>
+               </div>
+               <div><strong>Size</strong>
+                   <input type="radio" value="0" name="size" class="pudding" />
+                   <label>Small</label>
+                   <input type="radio" value="1" name="size" class="pudding"/>
+                   <label>Medium</label>
+                    <input type="radio" value="2" name="size" class="pudding"/>
+                    <label>Large</label>
+       </div>
+       <div><strong>Price: </strong><div  data-name="pudding">RM0.00</div></div>
+   
+       <div>
+        <button onclick="myFunction('pudding',event)">Add to Cart</button> 
+    </div>
+</fieldset>
+   
+</form>
+</div>
+
+
+        <div id="confirmOrder">
+            <a href="check_out.html" ><button id="confirmOrder">Confirm Order</button></a>
+        </div>
+    
+        
+    </body>
+</html>

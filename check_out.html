@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="css/check_out.css" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="picture/HatchfulExport-All/favicon2.png" />
+        <script>
+            //Price
+            const curry_laksa_price = 24.50;
+            const nasi_lemak_price = 12.50;
+            const prawn_mee_price = 7.50;
+            const wonton_noodles_price = 8.50;
+            const baked_cheese_rice_price = 11.00;
+
+            // Single Item Price
+            function check_food_number(element, price, name){
+                var food_number = element.value;
+                var item_total = food_number * price
+                
+                //update item price
+                document.querySelector(`[data-name= ${name}]`).innerHTML = "RM" + item_total.toFixed(2);
+
+            }
+            
+            function update_total_price(){
+                var curry_laksa_total = parseFloat(document.querySelector(`[data-name='curry_laksa']`).innerText.replace('RM','')) || 0;
+                var nasi_lemak_total = parseFloat(document.querySelector(`[data-name='nasi_lemak']`).innerText.replace('RM','')) || 0;
+                var prawn_mee_total = parseFloat(document.querySelector(`[data-name='prawn_mee']`).innerText.replace('RM','')) || 0;
+                var wonton_noodles_total = parseFloat(document.querySelector(`[data-name='wonton_noodles']`).innerText.replace('RM','')) || 0;
+                var baked_cheese_rice_total = parseFloat(document.querySelector(`[data-name='baked_cheese_rice']`).innerText.replace('RM','')) || 0;
+                var total_price = curry_laksa_total + nasi_lemak_total + prawn_mee_total + wonton_noodles_total + baked_cheese_rice_total;
+
+                //write total price
+                document.querySelector("#total_price").innerHTML = "RM" + total_price.toFixed(2);
+            }
+        
+        </script>
+
+    </head>
+    <body>
+        <title>Check Out</title>
+        <link href="css/css.css" rel="stylesheet"/>
+        <nav>
+            
+            <ul>
+                <a href="homepage.html" class="container">
+                    <img src="picture/pls_eat_logo2.png" width="100px" height="40px"/>
+                    <div class="overlay">
+                        
+                    </div>
+                </a>
+                <a href="homepage.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contacts.html">Contact Us</a>
+                <a href="location.html">Located Us</a>
+                <a href="review.html">Review</a>
+                <div class="container" id="add_to_cart">
+                    <a href="add_to_cart.html">
+                        <img src="picture/cart.png" width="50px" height="40px" />
+                    
+                    <div class="overlay">
+                        
+                    </div>
+                    </a>
+                </div>
+                
+                
+            </ul>
+        </nav>
+        
+        <h1>Check Out</h1>
+        <a href="add_to_cart.html">
+            <button type="submit" class="button" style="clear:both; ">&#8592; Back</button>
+        </a>
+        <!--Items-->
+        <!--Item 1-->
+        <table>
+            <p></p>
+            <tr colspan="2">
+                <td>
+                    <img src="picture/curry_laksa.jpg" class="food_image"/> 
+                </td>
+                <td>
+                    <p>Laksa</p>
+                    <select class="select" onchange="check_food_number(this, curry_laksa_price, 'curry_laksa'); update_total_price()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select> RM24.50  <button>x</button> 
+                    
+                    <p>Item Total</p>
+                    <h3 data-name="curry_laksa">RM0.00</h3>
+                </td>
+            </tr>
+                
+            <!--Item 2-->
+            <tr>
+                <td>
+                    <img src="picture/nasi_lemak.jpg" class="food_image" /> 
+                </td>
+                <td>
+                    <p>Nasi Lemak</p>
+                    <select class="select" onchange="check_food_number(this, nasi_lemak_price, 'nasi_lemak'); update_total_price();">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select> RM12.50  <button>x</button> 
+                    
+                    <p>Item Total</p>
+                    <h3 data-name="nasi_lemak">RM00.00</h3>
+                </td>
+            </tr>
+            <!--Item 3-->
+            <tr>
+                <td>
+                    <img src="picture/prawn_mee.png" class="food_image"/> 
+                </td>
+                <td>
+                    <p>Prawn Mee</p>
+                    <select class="select" onchange="check_food_number(this, prawn_mee_price, 'prawn_mee'); update_total_price();">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select> RM7.50  <button>x</button> 
+                    
+                    <p>Item Total</p>
+                    <h3 data-name="prawn_mee">RM00.00</h3>
+                </td>
+            </tr>
+            <!--Item 4-->
+            <tr>
+                <td>
+                    <img src="picture/wonton_noodles.jpg" class="food_image" /> 
+                </td>
+                <td>
+                    <p>Wonton Mee</p>
+                    <select class="select" onchange="check_food_number(this, wonton_noodles_price, 'wonton_noodles'); update_total_price();">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select> RM8.50  <button>x</button> 
+                    
+                    <p>Item Total</p>
+                    <h3 data-name="wonton_noodles">RM00.00</h3>
+                </td>
+            </tr>
+
+            <!--Item 5-->
+            <tr>
+                <td>
+                    <img src="picture/baked_cheese_rice.jpg" class="food_image"/> 
+                </td>
+                <td>
+                    <p>Baked Cheese Rice</p>
+                    <select class="select" onchange="check_food_number(this, baked_cheese_rice_price, 'baked_cheese_rice'); update_total_price();">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select> RM11.00  <button>x</button> 
+                    
+                    <p>Item Total</p>
+                    <h3 data-name="baked_cheese_rice">RM00.00</h3>
+                </td>
+            </tr>
+        </table>
+        <aside>
+            <h3>Total</h3>
+            <h1 id="total_price">RM00.00</h1>
+        </aside>
+
+
+        <a href="payment.html">
+            <button class="button"><span>Choose Payment Method </span></button>
+        </a>
+    </body>
+</html>

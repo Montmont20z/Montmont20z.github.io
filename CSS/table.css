@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+    padding: 15px;
+    margin: 0 20px 20px 0px;
+    border-spacing: 20px;
+    border-radius: 10px;
+}
+
+table, th, td{
+    background-color: #f25c05;
+    border: 1px solid white;
+    color: white;
+}
+
+th, td{
+    width: 25%;
+}
+
+td img{
+    width: 200px;
+    height: 180px;
+    margin: 10px;
+}
+
+td {
+    background-color: black;
+    text-align: center;
+    border-radius: 10px;
+}
+
+td h3{
+    font-family: cursive;
+}

@@ -1,0 +1,31 @@
+#logo {
+    width: 100%;
+}
+
+footer#footer, footer#footer td, footer#footer th, footer#footer table, footer#footer tr  {
+    
+    font-weight: 600;
+    color: white;
+    background-clip: padding-box;
+    background-color: rgb(147,173,131);
+    margin-bottom: 0;
+    border: none;
+    width: auto;
+    padding: 0px;
+    
+    border-spacing: 10px;
+    border-radius: 0px;
+    
+}
+
+table#L{
+    margin-left: 5%;
+}
+        
+table#R, table#R td, table#R th{
+    margin-left:50%;
+}
+
+table#L td {
+    text-align: left;
+}
